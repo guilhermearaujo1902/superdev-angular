@@ -1,0 +1,18 @@
+header, footer{
+    background-color: #101074;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+}
+
+main{
+    min-height: 450px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+}
