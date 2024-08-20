@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Estudante } from '../../interfaces/Estudante';
 
 @Component({
   selector: 'app-estudante',
@@ -7,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class EstudanteComponent {
 
-  @Input() estudante: any = {};
+  @Input() estudante!: Estudante;
 
 }

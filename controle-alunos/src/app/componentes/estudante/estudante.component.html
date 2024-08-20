@@ -1,5 +1,5 @@
-<div>
-    <img src="../../../assets/img/user1.png" alt="">
+<section>
+    <img src="{{estudante.imagem}}" alt="">
 
     <h2>{{ estudante.nome }}</h2>
     
@@ -12,9 +12,14 @@
     <p>
         <strong>E-mail: </strong> {{ estudante.email }}
     </p>
+
+    <div ngClass="{{ estudante.status ? 'aprovado' : 'reprovado' }}">
+        <p>Estudante {{ estudante.status ? 'Aprovado' : 'Reprovado' }}</p>
+    </div>
+
     <p>
         <span>
             {{ estudante.escola.nome }} - {{ estudante.escola.cidade }}
         </span>
     </p>
-</div>
+</section>

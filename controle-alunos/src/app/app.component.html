@@ -4,8 +4,17 @@
   </header>
   
   <main>
-    <app-estudante [estudante]="listaEstudantes[0]"></app-estudante>
-    <app-estudante [estudante]="listaEstudantes[1]"></app-estudante>
+
+    <div class="cards">
+      <app-estudante [estudante]="listaEstudantes[0]"></app-estudante>
+      <app-estudante [estudante]="listaEstudantes[1]"></app-estudante>
+      <app-estudante [estudante]="listaEstudantes[2]"></app-estudante>
+    </div>
+
+    <div class="lista">
+      <app-estudante-lista [lista]="listaEstudantes"></app-estudante-lista>
+    </div>
+    
   </main>
   
   <footer>

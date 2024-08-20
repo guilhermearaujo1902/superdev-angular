@@ -1,4 +1,4 @@
-div{
+section{
     width: 200px;
     padding: 8px;
     margin: 0 4px;
@@ -6,15 +6,31 @@ div{
     color: #333;
 }
 
-div img{
+section img{
     width: 100%;
 }
 
-div h2{
+section h2{
     font-size: 16px;
     text-align: center;
 }
 
-div p{
+section p{
     font-size: 12px;
+}
+
+.aprovado{
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 4px;
+    color: aliceblue;
+    background-color: #186718;
+}
+
+.reprovado{
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 4px;
+    color: aliceblue;
+    background-color: #910f0f;
 }
