@@ -1,5 +1,4 @@
 table, tr, th, td {
-    border: solid 1px #333;
     border-collapse: collapse;
     padding: 8px;
 }
@@ -11,4 +10,19 @@ table {
 .lista {
     display: flex;
     justify-content: center;
+}
+
+thead tr {
+    background-color: darkorange;
+    color: #FFF;
+}
+
+tbody tr:nth-child(even){
+    background-color: #e2e0e0;
+}
+
+tbody tr:hover {
+    background-color: #101074;
+    color: #FFF;
+    cursor: pointer;
 }

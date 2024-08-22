@@ -14,7 +14,7 @@ export class AppComponent {
       matricula: 111,
       email: 'harry@hogwarts.com',
       imagem: '../../../assets/img/user1.png',
-      status: true,
+      status: false,
       cursos: ['HTML', 'CSS', 'Angular'],
       escola: {
         nome: 'Proway',
@@ -44,7 +44,73 @@ export class AppComponent {
         nome: 'Proway',
         cidade: 'Blumenau'
       }
+    },
+    {
+      nome: 'Luna Lovegood',
+      matricula: 444,
+      email: 'luna@hogwarts.com',
+      imagem: '../../../assets/img/user3.png',
+      status: true,
+      cursos: ['HTML', 'CSS', 'Angular'],
+      escola: {
+        nome: 'Proway',
+        cidade: 'Blumenau'
+      }
     }
   ];
+
+  backupLista: Estudante[] = this.listaEstudantes;
+
+  exibicao: string = 'cards';
+
+  alterarExibicao(): void {
+    if (this.exibicao == 'cards') {
+      this.exibicao = 'lista';
+    } else {
+      this.exibicao = 'cards';
+    }
+  }
+
+  exibirAprovados(): void {
+
+    // Reiniciar a lista
+    this.exibirTodos();
+
+    // Maneira 1
+    // Utilizando o método 'filter' do tipo de dado Array
+    this.listaEstudantes = this.listaEstudantes.filter( estudante => {
+      return estudante.status == true;
+    });
+
+
+    // Maneira 2
+    // Utilizando o método 'forEach'
+    // criando a lista de aprovados
+    // const listaAprovados: Estudante[] = [];
+
+    // // percorrendo a lista atual
+    // this.listaEstudantes.forEach( estudante => {
+    //   // testando se cada aluno está com status true
+    //   if (estudante.status == true) {
+    //     // inserindo na lista de aprovados somente o estudande com o status TRUE
+    //     listaAprovados.push(estudante);
+    //   }
+    // });
+
+    // // reatribuindo valor para a lista atual com base nos estudantes da lista de aprovados
+    // this.listaEstudantes = listaAprovados;
+
+  }
+
+  exibirReprovados(): void {
+    this.exibirTodos();
+    this.listaEstudantes = this.listaEstudantes.filter( estudante => {
+      return estudante.status == false;
+    });
+  }
+
+  exibirTodos(): void {
+    this.listaEstudantes = this.backupLista;
+  }
 
 }

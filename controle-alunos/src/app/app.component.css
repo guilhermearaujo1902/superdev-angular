@@ -17,3 +17,24 @@ main .cards{
     flex-direction: row;
     justify-content: center;
 }
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 20px;
+}
+
+.botoes button {
+    border: none;
+    padding: 8px;
+    background-color: #101074;
+    color: #FFF;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.botoes button:hover {
+    background-color: darkorange;
+}
