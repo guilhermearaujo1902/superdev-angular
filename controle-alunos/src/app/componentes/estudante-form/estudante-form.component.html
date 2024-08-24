@@ -1,0 +1,35 @@
+<form>
+
+    <h3>Formulário Estudante</h3>
+
+    <div>
+        <label for="matricula">Matrícula</label>
+        <input type="text" id="matricula" name="matricula" [(ngModel)]="estudante.matricula">
+    </div>
+
+    <div>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="estudante.nome">
+    </div>
+
+    <div>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" [(ngModel)]="estudante.email">
+    </div>
+
+    <div>
+        <label for="curso">Curso</label>
+        <input type="text" id="curso" name="curso" [(ngModel)]="estudante.cursos[0]">
+    </div>
+
+    <div class="inline">
+        <input type="checkbox" id="status" name="status" [(ngModel)]="estudante.status">
+        <label for="status">Estudante aprovado</label>
+    </div>
+
+    <div class="inline flex-center">
+        <input type="submit" value="Salvar">
+        <input type="reset" value="Limpar">
+    </div>
+
+</form>

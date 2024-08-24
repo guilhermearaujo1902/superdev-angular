@@ -61,7 +61,7 @@ export class AppComponent {
 
   backupLista: Estudante[] = this.listaEstudantes;
 
-  exibicao: string = 'cards';
+  exibicao: string = 'lista';
 
   alterarExibicao(): void {
     if (this.exibicao == 'cards') {
@@ -111,6 +111,19 @@ export class AppComponent {
 
   exibirTodos(): void {
     this.listaEstudantes = this.backupLista;
+  }
+
+  onExcluir(matricula: number): void {
+    
+    // Encontrar o index do aluno com a matrícula igual ao parâmetro recebido
+    const indexEstudante = this.listaEstudantes.findIndex(estudante => {
+      return estudante.matricula === matricula;
+    });
+
+    if (indexEstudante >= 0) {
+      this.listaEstudantes.splice(indexEstudante, 1);
+    }
+
   }
 
 }

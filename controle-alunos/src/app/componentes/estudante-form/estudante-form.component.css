@@ -1,0 +1,32 @@
+form {
+    width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 4px;
+    border: solid 1px silver;
+    border-radius: 4px;
+}
+
+.inline {
+    padding: 8px 0;
+}
+
+.inline label {
+    display: inline;
+}
+
+.inline input {
+    width: 30%;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}

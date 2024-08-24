@@ -26,7 +26,10 @@
     </div>
 
     <div class="lista" *ngIf="exibicao == 'lista'">
-      <app-estudante-lista [lista]="listaEstudantes"></app-estudante-lista>
+      <app-estudante-lista 
+        (excluir)="onExcluir($event)"
+        [lista]="listaEstudantes">
+      </app-estudante-lista>
     </div>
     
   </main>

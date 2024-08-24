@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EstudanteComponent } from './componentes/estudante/estudante.component';
 import { EstudanteListaComponent } from './componentes/estudante-lista/estudante-lista.component';
+import { EstudanteFormComponent } from './componentes/estudante-form/estudante-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     EstudanteComponent,
-    EstudanteListaComponent
+    EstudanteListaComponent,
+    EstudanteFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,3 +26,25 @@ tbody tr:hover {
     color: #FFF;
     cursor: pointer;
 }
+
+button{
+    border: none;
+    padding: 8px;
+    margin: 0 4px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+button.editar{
+    background-color: #389e38;
+}
+
+button.excluir{
+    background-color: #c33333;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
